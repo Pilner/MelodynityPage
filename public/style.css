@@ -1,0 +1,76 @@
+html {
+	height: 100%;
+	margin: auto;
+	width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+body {
+	/* background: #136a8a;  
+	background: -webkit-linear-gradient(to right, #267871, #136a8a);
+	background: linear-gradient(to right, #267871, #136a8a); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-color: rgb(210, 250, 255);
+	background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), url("/pics/TRANSPARENT\ PATTERN\ BG.png");
+	font-family: 'PT Sans', sans-serif;
+
+}
+#navbarcolor {
+	background: #136a8a; 
+	background: -webkit-linear-gradient(#47beb7, #a1e6ff);  
+	background: linear-gradient(#47beb7, #a1e6ff);
+		
+}
+#navbarlogo {
+	height: 30pt;	
+}
+nav {
+	border-bottom: 2px solid rgb(71, 71, 71);
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+.jumbotron {
+	background-color: rgba(0,0,0,.1);
+	border-bottom: 5px double rgba(0,0,0,.2);
+	margin-bottom: 0;
+}
+.logobg {
+	background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://image.freepik.com/free-vector/light-blue-geometric-abstract-chaotic-triangle-pattern-background-polygon-vector-graphic_1164-1479.jpg");
+	background-repeat: repeat;
+}
+#mainlogo {
+	max-width: 100%;
+ 	height: auto;
+}
+.mainfooter {
+	border-top: 2px solid rgb(71, 71, 71);
+	background: #136a8a; 
+	background: -webkit-linear-gradient(#a1e6ff, #47beb7);  
+	background: linear-gradient(#a1e6ff, #47beb7);
+
+	
+}
+.homecards {
+	border-radius: 3.5%;
+}
+.footericons::before {
+	margin: 0 5rem;
+}
+footer .container  a {
+	color: black;
+	text-decoration: none;
+}
+footer .footercr a {
+	color: black;
+	text-decoration: none;
+}
+.footercr {
+	background-color: rgba(0, 0, 0, .06);
+	border-top: 1px dashed rgb(82, 163, 184);
+}
+.maintext {
+	margin: 0 5rem;
+}
