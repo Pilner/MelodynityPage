@@ -1,3 +1,3 @@
-﻿Click on `start.bat` to start the server
+﻿Click on `startserver.bat` to start the server
  
  Ctrl+C to end the server
