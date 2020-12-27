@@ -1,0 +1,39 @@
+<%- include("./partials/header") %>
+
+	<!-- NAV BAR -->
+	<nav class="navbar navbar-expand-lg navbar-light" id="navbarcolor">
+		<a href="/"><img id="navbarlogo" class="m-2" src="/pics/melodynitylogo.png" alt="MelodynityLogo"></a>
+
+	</nav>
+	<!-- NAV BAR -->
+
+
+
+	<div class="container newbody">
+		<div class="my-5">
+			<h1 class="text-center mb-5">Add a new song from Melodynity!</h1>
+			<div class="newform">
+				<form action="/new" method="POST">
+					<div class="form-group">
+						<input class="form-control" type="text" name="title" placeholder="Title">
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="description" placeholder="Description">
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="songLink" placeholder="Song URL">
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="embedLink" placeholder="Embed URL">
+					</div>
+					<div class="form-group">
+						<button class="btn btn-lg btn-primary btn-default btn-block">Submit!</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+<%- include("./partials/footer") %>

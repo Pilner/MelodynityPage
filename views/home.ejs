@@ -2,39 +2,38 @@
 
 	<!-- NAV BAR -->
 	<nav class="navbar navbar-expand-lg navbar-light" id="navbarcolor">
-	<a href="/"><img id="navbarlogo" class="m-2" src="/pics/melodynitylogo.png" alt="MelodynityLogo"></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
+		<a href="/"><img id="navbarlogo" class="m-2" src="/pics/melodynitylogo.png" alt="MelodynityLogo"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-	<div class="m-2 collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-		<li class="nav-item active col">
-			<a class="nav-link font-weight-bold disabled" href="#" alt="Home">Home <span class="sr-only">(current)</span></a>
-		</li>
-		<li class="nav-item col">
-			<a class="nav-link font-weight-bold" href="/about" alt="About">About</a>
-		</li>
-		<li class="nav-item dropdown col">
-			<a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="StreamNowButton">
-			Stream Now!
-			</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			<a class="dropdown-item" href="https://soundcloud.com/melodynity" alt="Soundcloud">Soundcloud</a>
-			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="#" alt="Spotify">Spotify</a>
-			<div class="dropdown-divider"></div>
-			<a class="dropdown-item" href="https://www.youtube.com/channel/UCQhfkcqH3_9t-DItavYGtqw" alt="Youtube">Youtube</a>
-			</div>
-		</li>
-		</ul>
-	</ul>
-	<ul class="navbar-nav ml-auto">
-		<li class="nav-item col">
-			<a class="nav-link font-weight-bold disabled" href="/game">Placeholder <span class="sr-only">(current)</span></a>
-		</li>
-	</ul>
-	</div>
+		<div class="m-2 collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active col">
+					<a class="nav-link font-weight-bold disabled" href="#" alt="Home">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item col">
+					<a class="nav-link font-weight-bold" href="/about" alt="About">About</a>
+				</li>
+				<li class="nav-item dropdown col">
+					<a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="StreamNowButton">
+					Stream Now!
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="https://soundcloud.com/melodynity" alt="Soundcloud">Soundcloud</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#" alt="Spotify">Spotify</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="https://www.youtube.com/channel/UCQhfkcqH3_9t-DItavYGtqw" alt="Youtube">Youtube</a>
+					</div>
+				</li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item col">
+					<a class="nav-link font-weight-bold disabled" href="/game">Placeholder <span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 	<!-- NAV BAR -->
 
@@ -53,60 +52,54 @@
 	<!-- JUMBOTRON -->
 		
 	<!-- MAIN PAGE -->
-
 	<div class="maintext">
-
 		<div class="mx-sm-5">
 			<h1 class="py-5">Listen Now!</h1>
 			<div class="row py-3">
 				<div class="col-md-6">
-					<div>
-						<div class="card homecards" style="width: 100%;">
-							<div class="card-img-top" alt="Card image cap">
-								<iframe class="homecards" width="100%" height="150px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/860626561&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
-							</div>
-							<div class="card-body">
-							  <h5 class="card-title">Candy</h5>
-							  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem optio vitae maiores. Quisquam sed repellat culpa. Distinctio, quibusdam reprehenderit?</p>
-							  <a href="https://soundcloud.com/melodynity/candy-melodynity-bootleg" class="btn btn-info">Go to Soundcloud</a>
-							  <a href="#" class="btn btn-primary float-right">Discuss</a>
-							</div>
+					<div class="card homecards" style="width: 100%;">
+						<div class="card-img-top" alt="Card image cap">
+							<iframe class="homecards" width="100%" height="150px" scrolling="no" frameborder="no" allow="autoplay" src= "<%= songInfo[songInfo.length - 1]["embedLink"] %>" ></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title"><%= songInfo[songInfo.length - 1]["title"] %></h5>
+							<p class="card-text"><%= songInfo[songInfo.length - 1]["description"] %></p>
+							<a href="<%= songInfo[songInfo.length - 1]["songLink"] %>" class="btn btn-info" target="_blank">Go to Soundcloud</a>
+							<a href="/<%= songInfo[songInfo.length - 1]._id %>" class="btn btn-primary float-right">Discuss</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6">
-					<div>
-						<div class="card homecards" style="width: 100%;">
-							<div class="card-img-top" alt="Card image cap">
-								<iframe class="homecards" width="100%" height="150px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/782351914&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
-							</div>
-							<div class="card-body">
-							  <h5 class="card-title">Approximate</h5>
-							  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem optio vitae maiores. Quisquam sed repellat culpa. Distinctio, quibusdam reprehenderit?</p>
-							  <a href="https://soundcloud.com/melodynity/approximate" class="btn btn-info">Go to Soundcloud</a>
-							  <a href="#" class="btn btn-primary float-right">Discuss</a>
-							</div>
+					<div class="card homecards" style="width: 100%;">
+						<div class="card-img-top" alt="Card image cap">
+							<iframe class="homecards" width="100%" height="150px" scrolling="no" frameborder="no" allow="autoplay" src= "<%= songInfo[songInfo.length - 2]["embedLink"] %>" ></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
 						</div>
-					</div>
-				</div>
-			</div>
-	
-			<div class="row py-3">
-				<div class="col-md d-flex justify-content-center">
-					<div class="card homecards" style="background-color: rgba(255,255,255,0.8);">
 						<div class="card-body">
-						  <h5 class="card-title">Listen to more music!</h5>
-						  <p class="card-text">Felt it's not enough? Just click the link below!</p>
-						  <div class="text-center">
-							  <a href="https://soundcloud.com/melodynity" class="btn btn-primary card-link">Listen More</a>
-						  </div>
+							<h5 class="card-title"><%= songInfo[songInfo.length - 2]["title"] %></h5>
+							<p class="card-text"><%= songInfo[songInfo.length - 2]["description"] %></p>
+							<a href="<%= songInfo[songInfo.length - 2]["songLink"] %>" class="btn btn-info" target="_blank">Go to Soundcloud</a>
+							<a href="/<%= songInfo[songInfo.length - 2]._id %>" class="btn btn-primary float-right">Discuss</a>
 						</div>
 					</div>
 				</div>
 			</div>
-	
 		</div>
-		
+				
+		<div class="row py-3">
+			<div class="col-md d-flex justify-content-center">
+				<div class="card homecards" style="background-color: rgba(255,255,255,0.8);">
+					<div class="card-body">
+						<h5 class="card-title">Listen to more music!</h5>
+						<p class="card-text">Felt it's not enough? Just click the link below!</p>
+						<div>
+							<a href="https://soundcloud.com/melodynity" class="btn btn-info card-link" target="_blank">Listen More</a>
+							<a href="/all" class="btn btn-secondary card-link float-right">All Songs</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+			
 		<div>
 			<div class="mx-sm-5 pb-5">
 				<h1 class="py-4">Watch Now!</h1>
@@ -116,13 +109,10 @@
 					<div class="embed-responsive embed-responsive-16by9 mb-5">
 						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/x8Aa0LxsQ3g"></iframe>
 					</div>
-				</div>
-	
+				</div>		
 			</div>
 		</div>
 	</div>
-
-	
 	<!-- MAIN PAGE -->
 
 <%- include("./partials/footer") %>

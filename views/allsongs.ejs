@@ -36,37 +36,38 @@
 		</div>
 	</nav>
 	<!-- NAV BAR -->
-	<!-- DISCUSS -->
-	<div class="m-5">
-		<div class="row">
-			<div class="col-2">
-				<button onclick="goBack()" class="btn btn-outline-secondary btn-lg">Go Back</button>
-			</div>
-			<div class="col-8">
-				<h1 class="mb-5 text-center">Discuss about <%= songInfo["title"] %></h1>
 
-			</div>
-			<div class="col-2"></div>
-		</div>
-	</div>
-	<div class="container my-5">
+	<!-- ALL SONG CARDS -->
+	<div class="maintext">
+		<div class="mx-sm-5">
 
-		<div class="text-center">
-			<div class="card homecards" style="width: 100%;">
-				<div class="card-img-top" alt="Card image cap">
-					<iframe class="homecards" width="100%" height="150px" scrolling="no" frameborder="no" allow="autoplay" src= "<%= songInfo["embedLink"] %>" ></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+			<h1 class="py-5">All Uploaded Songs</h1>
+			<div class="row">
+				<% songInfo.slice().reverse().forEach((song, index) => { %>
+				<div class="col-md-6 mb-5">
+					<div class="card homecards" style="width: 100%;">
+						<div class="card-img-top" alt="Card image cap">
+							<iframe class="homecards" width="100%" height="150px" scrolling="no" frameborder="no" allow="autoplay" src= "<%= song["embedLink"] %>" ></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title"><%= song["title"] %></h5>
+							<p class="card-text"><%= song["description"] %></p>
+							<a href="<%= song["songLink"] %>" class="btn btn-info" target="_blank">Go to Soundcloud</a>
+							<a href="/<%= song._id %>" class="btn btn-primary float-right">Discuss</a>
+						</div>
+					</div>
+					
 				</div>
-				<div class="card-body">
-					<h3 class="card-title"><%= songInfo["title"] %></h5>
-					<p class="card-text"><%= songInfo["description"] %></p>
-					<a href="<%= songInfo["songLink"] %>" class="btn btn-info">Go to Soundcloud</a>
-
-				</div>
+				<% }) %>
 			</div>
 		</div>
 	</div>
-	<!-- DISCUSS -->
-		
-		
-		
-		<%- include("./partials/footer") %>
+	<!-- ALL SONG CARDS -->
+
+
+
+
+<%- include("./partials/footer") %>
+
+
+

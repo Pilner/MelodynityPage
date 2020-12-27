@@ -1,3 +1,4 @@
+/* MAIN */
 html {
 	height: 100%;
 	margin: auto;
@@ -8,7 +9,6 @@ html {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
 }
-
 body {
 	/* background: #136a8a;  
 	background: -webkit-linear-gradient(to right, #267871, #136a8a);
@@ -16,8 +16,10 @@ body {
 	background-color: rgb(210, 250, 255);
 	background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), url("/pics/TRANSPARENT\ PATTERN\ BG.png");
 	font-family: 'PT Sans', sans-serif;
-
 }
+
+
+/* NAVBAR */
 #navbarcolor {
 	background: #136a8a; 
 	background: -webkit-linear-gradient(#47beb7, #a1e6ff);  
@@ -32,6 +34,8 @@ nav {
 	font-size: 18px;
 	letter-spacing: 1px;
 }
+
+/* LOGOTRON */
 .jumbotron {
 	background-color: rgba(0,0,0,.1);
 	border-bottom: 5px double rgba(0,0,0,.2);
@@ -45,16 +49,23 @@ nav {
 	max-width: 100%;
  	height: auto;
 }
+
+/* CONTENT */
+.homecards {
+	border-radius: 3.5%;
+}
+.maintext {
+	margin: 0 5rem;
+}
+
+
+
+/* FOOTER */
 .mainfooter {
 	border-top: 2px solid rgb(71, 71, 71);
 	background: #136a8a; 
 	background: -webkit-linear-gradient(#a1e6ff, #47beb7);  
 	background: linear-gradient(#a1e6ff, #47beb7);
-
-	
-}
-.homecards {
-	border-radius: 3.5%;
 }
 .footericons::before {
 	margin: 0 5rem;
@@ -71,6 +82,44 @@ footer .footercr a {
 	background-color: rgba(0, 0, 0, .06);
 	border-top: 1px dashed rgb(82, 163, 184);
 }
-.maintext {
-	margin: 0 5rem;
+
+/* SHOW */
+.showpage {
+	display: inline-block;
+}
+
+
+/* NEW FORM */
+.newform {
+	width: 70%; margin: 25px auto;
+}
+.newform input {
+	text-align: center;
+}
+.newbody {
+	margin-bottom: 18%;
+}
+
+
+/* SONG LIST */
+table {
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+table th,td {
+	border: 1px solid black;
+	text-align: center;
+	padding: 8px;
+  }
+
+.wordbr {
+	word-break: break-all;
+}
+  
+tr:nth-child(even) {
+	background-color: rgba(0,0,0,.15);
+  }
+.listbody {
+	margin-bottom: 18%;
 }
