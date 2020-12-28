@@ -71,7 +71,15 @@ app.post("/new", (req, res) => {
 	var title = req.body.title;
 	var desc = req.body.description;
 	var songLink = req.body.songLink;
-	var embedLink = req.body.embedLink
+	var embedLink = srcEmbedLink(req.body.embedLink);
+		// get only the src link from the embed url
+		function srcEmbedLink(old) {
+			var before = old;
+			var after = before.match('src="(.*)"></iframe>');
+
+			return after[1];
+		}
+
 	var newSong = {title: title, description: desc, songLink: songLink, embedLink: embedLink};
 		// Insert a new song and save to DB
 	SongInfo.create(newSong, (err, newlyCreated) => {
