@@ -52,11 +52,11 @@
 	<!-- JUMBOTRON -->
 		
 	<!-- MAIN PAGE -->
-	<div class="maintext">
+	<div class="mx-3 mx-md-5">
 		<div class="mx-sm-5">
 			<h1 class="py-5">Listen Now!</h1>
-			<div class="row py-3">
-				<div class="col-md-6">
+			<div class="row py-3">						
+				<div class="col-md-6 my-md-0 my-3">
 					<div class="card homecards" style="width: 100%;">
 						<div class="card-img-top" alt="Card image cap">
 							<iframe class="homecards" width="100%" height="150px" scrolling="no" frameborder="no" allow="autoplay" src= "<%= songInfo[songInfo.length - 1]["embedLink"] %>" ></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
@@ -64,8 +64,10 @@
 						<div class="card-body">
 							<h5 class="card-title"><%= songInfo[songInfo.length - 1]["title"] %></h5>
 							<p class="card-text"><%= songInfo[songInfo.length - 1]["description"] %></p>
-							<a href="<%= songInfo[songInfo.length - 1]["songLink"] %>" class="btn btn-info" target="_blank">Go to Soundcloud</a>
-							<a href="/<%= songInfo[songInfo.length - 1]._id %>" class="btn btn-primary float-right">Discuss</a>
+							<div class="text-center">
+							<a href="<%= songInfo[songInfo.length - 1]["songLink"] %>" class="btn btn-info float-sm-left my-sm-0 my-2" target="_blank">Go to Soundcloud</a>
+								<a href="/<%= songInfo[songInfo.length - 1]._id %>" class="btn btn-primary float-sm-right">Discuss</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -77,11 +79,14 @@
 						<div class="card-body">
 							<h5 class="card-title"><%= songInfo[songInfo.length - 2]["title"] %></h5>
 							<p class="card-text"><%= songInfo[songInfo.length - 2]["description"] %></p>
-							<a href="<%= songInfo[songInfo.length - 2]["songLink"] %>" class="btn btn-info" target="_blank">Go to Soundcloud</a>
-							<a href="/<%= songInfo[songInfo.length - 2]._id %>" class="btn btn-primary float-right">Discuss</a>
+							<div class="text-center">
+							<a href="<%= songInfo[songInfo.length - 2]["songLink"] %>" class="btn btn-info float-sm-left my-sm-0 my-2" target="_blank">Go to Soundcloud</a>
+								<a href="/<%= songInfo[songInfo.length - 2]._id %>" class="btn btn-primary float-sm-right">Discuss</a>
+							</div>
 						</div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 				
@@ -91,9 +96,9 @@
 					<div class="card-body">
 						<h5 class="card-title">Listen to more music!</h5>
 						<p class="card-text">Felt it's not enough? Just click the link below!</p>
-						<div>
-							<a href="https://soundcloud.com/melodynity" class="btn btn-info card-link" target="_blank">Listen More</a>
-							<a href="/all" class="btn btn-secondary card-link float-right">All Songs</a>
+						<div class="text-center">
+							<a href="https://soundcloud.com/melodynity" class="btn btn-info float-sm-left my-sm-0 my-2" target="_blank">Listen More</a>
+							<a href="/all" class="btn btn-secondary float-sm-right">All Songs</a>
 						</div>
 					</div>
 				</div>

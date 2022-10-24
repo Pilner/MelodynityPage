@@ -1,6 +1,5 @@
 // SETUP
 var express		= require("express"),
-	bodyParser	= require("body-parser"),
 	app			= express(),
 	mongoose	= require("mongoose"),
 	SongInfo 	= require("./models/songinfo"),
@@ -11,7 +10,7 @@ mongoose.connect("mongodb://localhost:27017/melodynitytest1", {useNewUrlParser: 
 
 seedDB();
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.static("assets"));
@@ -52,7 +51,18 @@ app.get("/list", (req, res) => {
 		if (err) {
 			console.log(err)
 		} else {
-			res.render("songlist", {songInfo: songList});
+			function removeSong(songId) {
+				SongInfo.findByIdAndRemove(songId, (err) => {
+					if (err) {
+						console.log(err);
+					} else {
+						console.log(songId["title"] + " has been removed");
+						location.reload();
+					}
+				})
+			}
+			res.render("songlist", {songInfo: songList, removeSong: removeSong});
+			
 		}
 	})
 })
@@ -95,8 +105,10 @@ app.post("/new", (req, res) => {
 });
 
 
+
 // SHOW - shows more info about a song
 app.get("/:id", (req, res) => {
+	
 	// find the song with the provided id
 	SongInfo.findById(req.params.id).exec((err, foundSong) => {
 		if (err) {
@@ -104,10 +116,19 @@ app.get("/:id", (req, res) => {
 		} else {
 			// render show template with that song
 			res.render("show", {songInfo: foundSong});
+
+			const SoundCloud = require('soundcloud-api-client');
+ 
+			const client_id = 'PMAVSQ46tClLDGzoNT3kfsNW6lrhXo05';
+			const soundcloud = new SoundCloud({ PMAVSQ46tClLDGzoNT3kfsNW6lrhXo05 });
+			
+			const q = 'live mix';
+			const genres = [ 'house', 'tech-house', 'techno' ].join(',');
+			
+			soundcloud.get('/tracks', { q, genres })
 		}
 	})
 })
-
 
 
 // LISTEN

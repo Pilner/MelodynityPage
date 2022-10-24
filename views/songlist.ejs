@@ -47,6 +47,7 @@
 					<th>Description</th>
 					<th>Song URL</th>
 					<th>Embed URL</th>
+					<th>Delete</th>
 				</tr>
 				<% songInfo.forEach((song, index) => { %>
 				<tr>	
@@ -55,11 +56,15 @@
 					<td><%= song["description"] %></td>
 					<td class="wordbr"><%= song["songLink"] %></td>
 					<td class="wordbr"><%= song["embedLink"] %></td>
+					<td>
+						<button onclick="<%%= removeSong('<%= song._id %>') %%>" class="fas fa-trash-alt" name="songDelete" value="<%= song['title'] %>"></button>
+					</td>					
 				</tr>
 				<% }) %>
 			</table>
 		</div>
 	</div>
 	<!-- TABLE -->
+	
 		
 		<%- include("./partials/footer") %>

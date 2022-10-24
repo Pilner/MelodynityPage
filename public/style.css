@@ -14,10 +14,9 @@ body {
 	background: -webkit-linear-gradient(to right, #267871, #136a8a);
 	background: linear-gradient(to right, #267871, #136a8a); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	background-color: rgb(210, 250, 255);
-	background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), url("/pics/TRANSPARENT\ PATTERN\ BG.png");
+	background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), url("/pics/TRANSPARENTPATTERNBG.png");
 	font-family: 'PT Sans', sans-serif;
 }
-
 
 /* NAVBAR */
 #navbarcolor {
@@ -54,9 +53,9 @@ nav {
 .homecards {
 	border-radius: 3.5%;
 }
-.maintext {
-	margin: 0 5rem;
-}
+/* .maintext {
+	margin: 0 2rem;
+} */
 
 
 
@@ -99,7 +98,6 @@ footer .footercr a {
 .newbody {
 	margin-bottom: 18%;
 }
-
 
 /* SONG LIST */
 table {
